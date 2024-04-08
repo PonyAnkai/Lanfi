@@ -20,10 +20,16 @@ namespace Lanfi
 
         private void AddNewConnect(object sender, EventArgs e)
         {
-            string ip, desc = "";
-
-            ip = IPAdressField.Text.Trim();
-            desc = DescField.Text.Trim();
+            string ip = "", desc = "";
+            try
+            {
+                ip = IPAdressField.Text.Trim();
+                desc = DescField.Text.Trim();
+            }
+            catch 
+            {
+                
+            }
 
             if (ip == "")
             {

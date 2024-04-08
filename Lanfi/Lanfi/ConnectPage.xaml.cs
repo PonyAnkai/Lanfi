@@ -27,14 +27,25 @@ namespace Lanfi
             serverCollections.ItemsSource = App.Db.GetConnections();
         }
 
-        private async void NewConnect(object sender, EventArgs e)
+        private void DeleteConnectDo(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new NewConnectPage(), false);
+            var button = (Button)sender;
+            Connections item = new Connections()
+            {
+                ID = Convert.ToInt32(button.ClassId)
+            };
+            App.Db.DeleteConnections(item);
+            OnAppearing();
         }
-        private async void Refresh(object sender, EventArgs e)
+
+        private void TryReconectDo(object sender, EventArgs e)
         {
-            await Navigation.PopAsync();
-            await Navigation.PushModalAsync(new MainPage(), false);
+
+        }
+
+        private void ConnectToChat(object sender, EventArgs e)
+        {
+
         }
     }
 }

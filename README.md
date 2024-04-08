@@ -1,5 +1,4 @@
-- App.xaml.cs - Основной файл приложения
-
-- StartPage.cs - Класс основной страницы
-
-- MainPage.xaml - Страница к удалению в будущем
+- - Verson 0.12 - -
+→ good inteface?
+→ Can delete entry on DB
+→ Can add entry in DB

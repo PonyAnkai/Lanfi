@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Lanfi
 {
-    internal class _HTTP_Req
+    internal class HTTP_Req
     {
     }
 }

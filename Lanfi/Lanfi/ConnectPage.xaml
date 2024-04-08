@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lanfi.ConnectPage"
+             Title="Connections"
+             BackgroundColor="#262626">
+    <StackLayout>
+
+        <StackLayout BackgroundColor="#262626">
+            <Label Text="All connection" TextColor="White" FontSize="20" Padding="10" HorizontalOptions="Center"/>
+        </StackLayout>
+        
+        <RelativeLayout BackgroundColor="#262626">
+            <CollectionView x:Name="serverCollections">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Padding="5">
+                            <StackLayout Padding="5" BackgroundColor="#4f4f4f">
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Адресс подключения:" FontAttributes="Bold" FontSize="18"/>
+                                    <Label Text="{Binding IP}" FontSize="18"/>  
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Подключение:" FontSize="16" FontAttributes="Bold"/>
+                                    <Label Text="{Binding Status}" FontSize="16"/>
+                                </StackLayout>
+                                <StackLayout BackgroundColor="#5c5c5c">
+                                    <Label Text="{Binding Description}" FontSize="16"/>
+                                </StackLayout>
+                                <StackLayout HorizontalOptions="Center" Orientation="Horizontal" HeightRequest="34">
+                                    <Button x:Name="DeleteConnect" WidthRequest="80" HeightRequest="34" BackgroundColor="#5c5353" Text="Delete" Margin="0, 0, 120, 0"/>
+                                    <Button x:Name="TryReconect" WidthRequest="80" HeightRequest="34" Background="#535c53" Text="recon" FontSize="12"/>
+                                    <Button x:Name="ConnectToChat" WidthRequest="80" HeightRequest="34" Background="#535c53" Text="connect" FontSize="12"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </RelativeLayout>
+        
+
+    </StackLayout>
+</ContentPage>

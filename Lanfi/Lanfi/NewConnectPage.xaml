@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lanfi.NewConnectPage"
+             Title="New Connect">
+
+    <StackLayout Padding="10" BackgroundColor="#262626">
+        <Label Text="Add new connect" FontSize="20" TextColor="White" HorizontalOptions="Center"/>
+        <Entry x:Name="IPAdressField" Placeholder="IP Adress" PlaceholderColor="#e3e3e3" TextColor="#e3e3e3" MaxLength="50"/>
+        <Entry x:Name="DescField" Placeholder="Descriptions" PlaceholderColor="#e3e3e3" TextColor="#e3e3e3" MaxLength="100"/>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+            <Button Text="Drop" Clicked="DropOfWrited"/>
+            <Button Text="Add" Clicked="AddNewConnect"/>
+        </StackLayout>
+        <Label x:Name="Succses" Text="" TextColor="Green" FontSize="18" HorizontalOptions="Center"/>
+    </StackLayout>
+</ContentPage>

@@ -1,5 +1,3 @@
-- App.xaml.cs - Основной файл приложения
-
-- StartPage.cs - Класс основной страницы
-
-- MainPage.xaml - Страница к удалению в будущем
+i fuck dub...
+Do project from low many days.
+start in 6 April 2024
